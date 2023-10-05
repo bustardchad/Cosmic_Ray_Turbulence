@@ -1,3 +1,7 @@
+# Script to create a multipanel figure showing the cosmic ray scale length, 
+# the cosmic ray pressure, the density ratio (compared to initial density),
+# and the misalignment between the magnetic field and cosmic ray pressure gradient
+
 import yt
 from yt.units import dimensions
 from yt.units import erg

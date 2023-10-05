@@ -1,9 +1,10 @@
-# analysis_forCRTurb
-Directory of Python scripts using the yt visualization and analysis toolkit
-Specifically for analyzing cosmic ray + turbulence simulations from Bustard and Oh 2022a,b
+## Cosmic Ray Impacts on Turbulence
 
-Main files are:
-  turb_spectrum_average.py -- calculates power spectrum of kinetic energy
-  turb_spectrum_heating.py -- calculates power spectrum of CR heating rate
-  turb_spectrum_heating_stats.py -- same as above, using a different method as a consistency check
-  
+This repo contains scripts supporting the research published in Bustard and Oh 2022 and Bustard and Oh 2023 probing the interplay between cosmic rays and magnetized turbulence.
+
+#### Instructions
+To get all the necessary dependencies, start by running pip install -r requirements.txt
+
+Next, check out the Jupyter notebook CR_Turb_Notebook.ipynb, which is a mixture of code snippets, figures, and explanations -- essentially an interactive summary of Bustard and Oh 2022, 2023
+
+From there, feel free to explore any other Python scripts. In particular, HodgeHelmholtz.py is useful if you have any simulation volume and want to decompose it into compressive and solenoidal motions. The script will print out the ratio of solenoidal to compressive power, and it will generate spectra for each component. To run, there are two command line options you'll need to set: file_path = the path to your files in HDF5 format or any other format that yt can read; files = the file names. The domain size and everything else should be taken care of by yt. E.g. to run, type python3 --file_path = "/../files/" files = "cr.out1.004*"

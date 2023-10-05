@@ -1,4 +1,5 @@
-# plots slices of density for various times
+# Script that calculates and plots velocity divergence
+# Also calculates average velocity divergence
 
 import yt
 from yt.units import dimensions
